@@ -1,0 +1,1 @@
+enum Directions {Nord, Sud, Est, Ouest}
