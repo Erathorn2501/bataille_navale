@@ -36,7 +36,11 @@ public class Ship {
         else return 1;
     }
 
+    public int getSize() {
+        return size;
+    }
 
-
-
+    public List<Coordinate> getListCoor() {
+        return listCoor;
+    }
 }

@@ -46,6 +46,7 @@ public class Coordinate {
         return new Coordinate(newAbscisse, newOrdonnée);
     }
 
+    //Vérifie si le bateau dépasse les bornes de la carte
     public boolean verifCoor(Coordinate coorVerif, int borneMap){
 
         if(coorVerif.abscisse > borneMap || coorVerif.ordonnée > borneMap){
@@ -59,6 +60,7 @@ public class Coordinate {
         else return true;
     }
 
+    //Vérifie si un bateau est présent sur une case ou non
     public boolean isOnPlot(Coordinate shipCoor, Coordinate plotCoor){
         if(shipCoor.abscisse == plotCoor.abscisse && shipCoor.ordonnée == plotCoor.ordonnée){
             return true;

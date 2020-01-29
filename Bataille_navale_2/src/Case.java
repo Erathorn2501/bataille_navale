@@ -14,6 +14,7 @@ public class Case {
         }
     }
 
+    //Méthode d'attaque d'un joueur
     public void attack(){
 
     }
