@@ -27,15 +27,19 @@ public class Coordinate {
             case NORD:
                 newAbscisse = this.abscisse;
                 newOrdonnée = this.ordonnée + i;
+                break;
             case SUD:
                 newAbscisse = this.abscisse;
                 newOrdonnée = this.ordonnée - i;
+                break;
             case OUEST:
                 newAbscisse = this.abscisse - i;
                 newOrdonnée = this.ordonnée;
+                break;
             case EST:
                 newAbscisse = this.abscisse + i;
                 newOrdonnée = this.ordonnée;
+                break;
             default :
                 newAbscisse = 0;
                 newOrdonnée = 0;
