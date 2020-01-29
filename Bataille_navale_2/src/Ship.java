@@ -4,12 +4,12 @@ import java.util.List;
 public class Ship {
 
     //Déclaration des attributs du bateau
-    Coordinate coor;
-    ShipModel model;
-    int size;
-    Direction dir;
-    int HP;
-    List<Coordinate> listCoor = new ArrayList<Coordinate>();
+    private Coordinate coor;
+    private ShipModel model;
+    private int size;
+    private Direction dir;
+    private int HP;
+    private List<Coordinate> listCoor = new ArrayList<Coordinate>();
 
     //Constructeur bateau entier
     public Ship (Coordinate NewCoor, ShipModel NewModel, Direction NewDir){
