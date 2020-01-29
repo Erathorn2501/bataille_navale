@@ -10,7 +10,11 @@ public class Case {
             case 0 : return "~";
             case 1 : return "O";
             case 2 : return  "X";
-            default: return ("@");
+            default: return "@";
         }
+    }
+
+    public void attack(){
+
     }
 }

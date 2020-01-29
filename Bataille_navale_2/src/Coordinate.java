@@ -1,48 +1,68 @@
 public class Coordinate {
 
     //Déclaration des variables "coordonnées"
-    int x;
-    int y;
+    private int abscisse;
+    private int ordonnée;
 
-    //Constructeur à vide
-    public Coordinate(){
+    public int getAbscisse() {
+        return abscisse;
+    }
 
+    public int getOrdonnée() {
+        return ordonnée;
     }
 
     //Constructeur entier
     public Coordinate(int NewX, int NewY){
-        this.x = NewX;
-        this.y = NewY;
+        this.abscisse = NewX;
+        this.ordonnée = NewY;
     }
 
     //Calcul des coordonnées suivantes du bateau (depuis la coordonnée de départ)
     public Coordinate ShipNextCoor(Direction dir, int i){
 
-        Coordinate newCoor = new Coordinate();
+        int newAbscisse, newOrdonnée;
 
         switch (dir){
             case NORD:
-                newCoor.x = this.x;
-                newCoor.y = this.y + i;
-                return newCoor;
+                newAbscisse = this.abscisse;
+                newOrdonnée = this.ordonnée + i;
             case SUD:
-                newCoor.x = this.x;
-                newCoor.y = this.y - i;
-                return newCoor;
+                newAbscisse = this.abscisse;
+                newOrdonnée = this.ordonnée - i;
             case OUEST:
-                newCoor.x = this.x - i;
-                newCoor.y = this.y;
-                return newCoor;
+                newAbscisse = this.abscisse - i;
+                newOrdonnée = this.ordonnée;
             case EST:
-                newCoor.x = this.x + i;
-                newCoor.y = this.y;
-                return newCoor;
+                newAbscisse = this.abscisse + i;
+                newOrdonnée = this.ordonnée;
             default :
-                newCoor.x = 0;
-                newCoor.y = 0;
+                newAbscisse = 0;
+                newOrdonnée = 0;
                 System.out.println("Soucis détecté");
                 throw new IllegalArgumentException();
         }
+
+        return new Coordinate(newAbscisse, newOrdonnée);
     }
 
+    public boolean verifCoor(Coordinate coorVerif, int borneMap){
+
+        if(coorVerif.abscisse > borneMap || coorVerif.ordonnée > borneMap){
+            System.out.println("Dépassement limite supérieure");
+            return false;
+        }
+        else if (coorVerif.abscisse <= 0 || coorVerif.ordonnée <= 0){
+            System.out.println("Dépassement limite inférieure");
+            return false;
+        }
+        else return true;
+    }
+
+    public boolean isOnPlot(Coordinate shipCoor, Coordinate plotCoor){
+        if(shipCoor.abscisse == plotCoor.abscisse && shipCoor.ordonnée == plotCoor.ordonnée){
+            return true;
+        }
+        else return false;
+    }
 }
