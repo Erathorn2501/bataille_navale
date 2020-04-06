@@ -1,5 +1,5 @@
 //package com.company;
-import com.company.BDConnection;
+//import com.company.BDConnection;
 
 import java.sql.*;
 import java.util.Scanner;
@@ -15,7 +15,7 @@ public class Main {
         String user = "julien";
         String password = "";
 
-        BDConnection test1 = new BDConnection(url, user, password); //Instenciation d'un objet Connection
+        BDConnection test1 = new BDConnection(url, user, password); //Instanciation d'un objet Connection
 
         Connection connection = test1.Connection();//Etablissement d'une connecxtion (établissement de la connection)
 
@@ -52,6 +52,8 @@ public class Main {
             newCredit = sc.nextInt();
 
             //lancer méthode création journaliste (via objet)
+            Reporter newReporter = new Reporter(newJournaliste, newCredit, newId);
+            sessionJournaliste.create(newReporter);
         }
 
 

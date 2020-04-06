@@ -39,6 +39,6 @@ public class ReporterDao {
     }
 
     public void create(Reporter reporter){
-
+    //Gérer création journaliste
     }
 }
