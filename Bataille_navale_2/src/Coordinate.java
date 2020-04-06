@@ -64,7 +64,7 @@ public class Coordinate {
         else return true;
     }
 
-    //Vérifie si un bateau est présent sur une case ou non
+    //Vérifie si un bateau est présent sur une case ou non //p-ê à refaire
     public boolean isOnPlot(Coordinate shipCoor, Coordinate plotCoor){
         if(shipCoor.abscisse == plotCoor.abscisse && shipCoor.ordonnée == plotCoor.ordonnée){
             return true;
