@@ -60,11 +60,11 @@ public class Reporter {
     }
 
     @Override
-    public String toString() {
-        return "Reporter{" +
-                "pseudo='" + pseudo + '\'' +
-                ", credit=" + credit +
-                ", id=" + id +
-                '}';
+        public String toString() {
+            return "Reporter{" +
+                    "pseudo='" + pseudo + '\'' +
+                    ", credit=" + credit +
+                    ", id=" + id +
+                    '}';
     }
 }

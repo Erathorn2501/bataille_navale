@@ -18,23 +18,23 @@ public class News {
     id_news int PK
      */
 
-    String titre;
-    String contenu;
-    String date;
-    String auteur;
-    int facteur_confiance;
-    String tags;
-    int id_news;
+    private String titre;
+    private String contenu;
+    private String date_creation;
+    private String auteur;
+    private int facteur_confiance;
+    private String tags;
+    private int id_news;
 
     public News(){
 
     }
 
-    public News(String titre, String contenu, String date, String auteur, int facteur_confiance, String tags, int id_news){
+    public News(String titre, String contenu, String date_creation, String auteur, int facteur_confiance, String tags, int id_news){
 
         this.titre = titre;
         this.contenu = contenu;
-        this.date = date;
+        this.date_creation = date_creation;
         this.auteur = auteur;
         this.facteur_confiance = facteur_confiance;
         this.tags = tags;
@@ -58,12 +58,12 @@ public class News {
         this.contenu = contenu;
     }
 
-    public String  getDate() {
-        return date;
+    public String  getDate_creation() {
+        return date_creation;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDate(String date_creation) {
+        this.date_creation = date_creation;
     }
 
     public String getAuteur() {
@@ -96,5 +96,18 @@ public class News {
 
     public void setId_news(int id_news) {
         this.id_news = id_news;
+    }
+
+    @Override
+    public String toString() {
+        return "News{" +
+                "titre='" + titre + '\'' +
+                ", contenu='" + contenu + '\'' +
+                ", date_creation='" + date_creation + '\'' +
+                ", auteur='" + auteur + '\'' +
+                ", facteur_confiance=" + facteur_confiance +
+                ", tags='" + tags + '\'' +
+                ", id_news=" + id_news +
+                '}';
     }
 }

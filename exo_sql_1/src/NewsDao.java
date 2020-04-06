@@ -8,7 +8,7 @@ public class NewsDao {
     public News readById(int id, Connection myConn) {
 
         //Préparation de la requête pour la lecture de la news par id
-        String sqlRequest = "SELECT * FROM cours1.news WHERE id = ?";
+        String sqlRequest = "SELECT * FROM cours1.news WHERE id_news = ?";
 
         //Ecriture de la requête
         try (PreparedStatement preparedStatement = myConn.prepareStatement(sqlRequest)) {
@@ -33,6 +33,7 @@ public class NewsDao {
 
         } catch (SQLException e) {
             e.printStackTrace();
+            System.out.println("Erreur lors du SELECT");
             return new News("Mistake !", "retrouver le type d'erreur", "01/01/2020 00:00:00", "l'ordinateur", 10, "#master", 99);
         }
 
@@ -43,40 +44,37 @@ public class NewsDao {
         //createNews();
     }
 
-    public void createNews(String titre, String contenu, String date, String auteur, int facteur_confiance, String tags, int id_new, Connection myConn) {
+    public boolean createNews(String titre, String contenu, String date_creation, String auteur, int facteur_confiance, String tags, int id_new, Connection myConn) {
 
         //Préparation de la requête pour la création de la news
-        String sqlRequest = "INSERT INTO cours1.news VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sqlRequest = "INSERT INTO cours1.news VALUES (\"?\", \"?\", \"?\", \"?\", ?, \"?\", ?);";
 
         //Ecriture de la requête
         try (PreparedStatement preparedStatement = myConn.prepareStatement(sqlRequest)) {
             preparedStatement.setString(1, titre);
             preparedStatement.setString(2, contenu);
-            preparedStatement.setString(3, date);
+            preparedStatement.setString(3, date_creation);
             preparedStatement.setString(4, auteur);
             preparedStatement.setInt(5, facteur_confiance);
             preparedStatement.setString(6, tags);
             preparedStatement.setInt(7, id_new);
 
             //Exécution de la requête
-            ResultSet rs = preparedStatement.executeQuery();
-            News news = new News();
-
-            while (rs.next()) {
-                //Vérif ce que rs renvoi lors d'une écriture
-
-            }
+            preparedStatement.executeQuery();
 
             // A titre de debug
-            System.out.println(news);
+            System.out.println("News crée");
+            return true;
 
         } catch (SQLException e) {
             e.printStackTrace();
+            System.out.println("Erreur lors du CREATE");
+            return false;
         }
 
     }
 
-    public void updateNews(int numColumn, String varStr, int varInt, String condition, Connection myConn) {
+    public boolean updateNews(int numColumn, String varStr, int varInt, String condition, Connection myConn) {
         String columnRequested;
         boolean strRequest;
         String sqlRequest;
@@ -112,18 +110,14 @@ public class NewsDao {
                 break;
             default:
                 columnRequested = "";
+                strRequest = false;
                 //Définir un renvoi
                 break;
         }
 
-        if (strRequest = true) {
-            //Préparation de la requête pour la création de la news
-            sqlRequest = "UPDATE news SET " + columnRequested + " = " + varStr + " WHERE " + condition;
-        }
-        else {
-            //Préparation de la requête pour la création de la news
-            sqlRequest = "UPDATE news SET " + columnRequested + " = " + varInt + " WHERE " + condition;
-        }
+        //Préparation de la requête pour l'update de la news
+        if (strRequest = true) {sqlRequest = "UPDATE news SET " + columnRequested + " = " + varStr + " WHERE " + condition;}
+        else {sqlRequest = "UPDATE news SET " + columnRequested + " = " + varInt + " WHERE " + condition;}
 
             //Ecriture de la requête
             try (PreparedStatement preparedStatement = myConn.prepareStatement(sqlRequest)) {
@@ -138,10 +132,35 @@ public class NewsDao {
 
                 // A titre de debug
                 System.out.println("news updated");
+                return true;
 
             } catch (SQLException e) {
                 e.printStackTrace();
+                System.out.println("Erreur lors de l'UPDATE (vérifiez l'orthogrpahe de votre requête, ainsi que vos droits d'utilisateurs)");
+                return false;
             }
+
+    }
+
+    public boolean deleteNews(String condition, Connection myConn){
+        //Préparation de la requête pour l'effacement de la news
+        String sqlRequest = "DELETE FROM news WHERE " + condition;
+
+        //Ecriture de la requête
+        try (PreparedStatement preparedStatement = myConn.prepareStatement(sqlRequest)) {
+
+            //Exécution de la requête
+            preparedStatement.executeQuery();
+
+            // A titre de debug
+            System.out.println("News effacée");
+            return true;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Erreur lors du DELETE");
+            return false;
+        }
 
     }
 }

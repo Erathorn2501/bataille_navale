@@ -26,4 +26,8 @@ public class BDConnection {
 
 
     }
+
+    public void stopConnection(){
+
+    }
 }
