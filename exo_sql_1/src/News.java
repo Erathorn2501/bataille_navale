@@ -1,5 +1,5 @@
-import java.sql.Date;
-import java.text.SimpleDateFormat;
+//import java.sql.Date;
+//import java.text.SimpleDateFormat;
 
 public class News {
 
@@ -30,6 +30,8 @@ public class News {
 
     }
 
+
+
     public News(String titre, String contenu, String date_creation, String auteur, int facteur_confiance, String tags, int id_news){
 
         this.titre = titre;
@@ -58,11 +60,11 @@ public class News {
         this.contenu = contenu;
     }
 
-    public String  getDate_creation() {
+    public String getDate_creation() {
         return date_creation;
     }
 
-    public void setDate(String date_creation) {
+    public void setDate_creation(String date_creation) {
         this.date_creation = date_creation;
     }
 

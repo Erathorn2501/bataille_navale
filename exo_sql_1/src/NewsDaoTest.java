@@ -15,14 +15,17 @@ class NewsDaoTest {
 
     Connection myConn = test1.Connection();//Etablissement d'une connecxtion (établissement de la connection)
 
-    private News newNews = new News("titre2", "Lorem2", "20-04-06", "juju", 5, "tagTest", 2);
+    private News newNews = new News("titre2", "Lorem2", "20-02-07", "juju", 5, "tagTest", 3);
     private News newsLorem = new News("titre1", "Lorem Ipsum", "2020-02-07 15:44:00", "michel", 4, "tag1, tag2", 1);
     private News fakeNews = new News("fake", "fake", "0000-00-00 00:00:00", "fake", 0, "fake", 999);
     private News wrongNews = new News("titre2", "Lorem2", "20-04-06", "juju", 5, "tagTest", 1);
     private News newsTest = new News();
     //private News createNewsTest = new News("titre2", "Lorem2", "06/04/2020 14:21:00", "juju", 5, "tagTest", 2);
     private NewsDao newsDaoTest = new NewsDao();
+
     private boolean boolTest;
+
+    private int idASupp = 2;
 
     @Test
     void readById1() {
@@ -51,15 +54,27 @@ class NewsDaoTest {
 
     @Test
     void updateNews() { /*à changer*/
-        boolTest = newsDaoTest.updateNews(1, "titre2", 0, "id_news=1", myConn);
+        boolTest = newsDaoTest.updateNews(1, "titre1", 0, "id_news = 1", myConn);
         assertEquals(true, boolTest, "updateNews-a : OK");
-        assertNotEquals(true, boolTest, "updateNews-a : pas OK");
 
     }
 
     @Test
-    void deleteNews() {
-        boolTest = newsDaoTest.deleteNews("id_news=2", myConn);
+    void updateNewsDate() {
+        boolTest = newsDaoTest.updateNews(3, "20-06-20", 0, "id_news = 2", myConn);
+        assertEquals(true, boolTest, "updateNews-a : OK");
+
+    }
+
+    @Test
+    void deleteNews1() {
+        boolTest = newsDaoTest.deleteNewsById(idASupp, myConn);
         assertTrue(boolTest, "deleteNews : OK");
+    }
+
+    @Test
+    void deleteNews2() {
+        boolTest = newsDaoTest.deleteNewsById(fakeNews.getId_news(), myConn);
+        assertFalse(boolTest, "deleteNews : OK");
     }
 }

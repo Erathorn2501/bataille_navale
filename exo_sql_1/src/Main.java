@@ -21,12 +21,12 @@ public class Main {
 
         //Fin étape 1
         //Etape 2
-
+/*
         System.out.println("Veuillez renseigner votre Id : \n");//Récup de l'id du journaliste qui veut se connecter
         int nbResponse;
         nbResponse =sc.nextInt();//Récuperation de la valeur de l'id
         ReporterDao sessionJournaliste = new ReporterDao();
-        Reporter reporter1 =  sessionJournaliste.readById(nbResponse, connection);
+        Reporter reporter1 =  sessionJournaliste.readById(nbResponse, connection);*/
 
         //Fin étape 2
 
@@ -36,7 +36,7 @@ public class Main {
         System.out.println("Crédit : " + reporter1.getCredit());*/
 
         //Etape 3
-        System.out.println("Souhaitez-vous ajouter un journaliste ? (1=oui/2=non)");
+        /*System.out.println("Souhaitez-vous ajouter un journaliste ? (1=oui/2=non)");
         nbResponse =sc.nextInt();
 
         if (nbResponse==1){
@@ -54,8 +54,13 @@ public class Main {
             //lancer méthode création journaliste (via objet)
             Reporter newReporter = new Reporter(newJournaliste, newCredit, newId);
             sessionJournaliste.create(newReporter);
-        }
+        }*/
 
+        System.out.println("test create");
 
+        NewsDao testCreate = new NewsDao();
+        News newsToCreate = new News("titre2", "Lorem2", "20-02-07", "juju", 5, "tagTest", 3);
+
+        testCreate.createNews(newsToCreate, connection);
     }
 }

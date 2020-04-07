@@ -21,7 +21,7 @@ public class NewsDao {
             while (rs.next()) {
                 news.setTitre(rs.getString(1));
                 news.setContenu(rs.getString(2));
-                news.setDate(rs.getString(3));
+                news.setDate_creation(rs.getString(3));
                 news.setAuteur(rs.getString(4));
                 news.setFacteur_confiance(rs.getInt(5));
                 news.setTags(rs.getString(6));
@@ -46,7 +46,7 @@ public class NewsDao {
 
     public boolean createNews(News news, Connection myConn){
         //Préparation de la requête pour la création de la news
-        String sqlRequest = "INSERT INTO cours1.news VALUES (\"?\", \"?\", \"?\", \"?\", ?, \"?\", ?);";
+        /*String sqlRequest = "INSERT INTO cours1.news VALUES (\"?\", \"?\", \"?\", \"?\", ?, \"?\", ?);";
 
         //Ecriture de la requête
         try (PreparedStatement preparedStatement = myConn.prepareStatement(sqlRequest)) {
@@ -56,8 +56,13 @@ public class NewsDao {
             preparedStatement.setString(4, news.getAuteur());
             preparedStatement.setInt(5, news.getFacteur_confiance());
             preparedStatement.setString(6, news.getTags());
-            preparedStatement.setInt(7, news.getId_news());
+            preparedStatement.setInt(7, news.getId_news());*/
 
+
+        String sqlRequest = "INSERT INTO cours1.news VALUES (\"" + news.getTitre() +  "\", \"" + news.getContenu() + "\", \"" + news.getDate_creation() + "\", \"" + news.getAuteur() + "\", " + news.getFacteur_confiance() + ", \"" + news.getTags() + "\", " + news.getId_news() + ");";
+
+        try (PreparedStatement preparedStatement = myConn.prepareStatement(sqlRequest)) {
+            //preparedStatement.set
             //Exécution de la requête
             preparedStatement.executeUpdate();
 
@@ -118,19 +123,14 @@ public class NewsDao {
         }
 
         //Préparation de la requête pour l'update de la news
-        if (strRequest = true) {sqlRequest = "UPDATE news SET " + columnRequested + " = " + varStr + " WHERE " + condition;}
+        if (strRequest) {sqlRequest = "UPDATE cours1.news SET " + columnRequested + " = \"" + varStr + "\" WHERE " + condition;}
         else {sqlRequest = "UPDATE news SET " + columnRequested + " = " + varInt + " WHERE " + condition;}
 
             //Ecriture de la requête
             try (PreparedStatement preparedStatement = myConn.prepareStatement(sqlRequest)) {
 
                 //Exécution de la requête
-                ResultSet rs = preparedStatement.executeQuery();
-
-                while (rs.next()) {
-                    //Vérif ce que rs renvoi lors d'un update
-
-                }
+                preparedStatement.executeUpdate();
 
                 // A titre de debug
                 System.out.println("news updated");
@@ -144,15 +144,17 @@ public class NewsDao {
 
     }
 
-    public boolean deleteNews(String condition, Connection myConn){
+    public boolean deleteNewsById(int idToDelete, Connection myConn){
         //Préparation de la requête pour l'effacement de la news
-        String sqlRequest = "DELETE FROM news WHERE " + condition;
+        String sqlRequest = "DELETE FROM news WHERE id_news = " + idToDelete;
+
+
 
         //Ecriture de la requête
         try (PreparedStatement preparedStatement = myConn.prepareStatement(sqlRequest)) {
 
             //Exécution de la requête
-            preparedStatement.executeQuery();
+            preparedStatement.executeUpdate();
 
             // A titre de debug
             System.out.println("News effacée");
