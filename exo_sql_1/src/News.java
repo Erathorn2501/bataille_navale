@@ -110,4 +110,10 @@ public class News {
                 ", id_news=" + id_news +
                 '}';
     }
+
+    /*
+    @Override
+    public boolean equals(){
+
+    }*/
 }
