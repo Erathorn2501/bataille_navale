@@ -5,6 +5,11 @@ import java.text.SimpleDateFormat;
 
 public class NewsDao {
 
+    //Constantes à redéfinir
+    String currentBase = "cours1";
+    String currentTable = "news";
+    String columnOrder = "titre, contenu, date_creation, auteur, facteur_confiance, tags, id_news";
+
     public News readById(int id, Connection myConn) {
 
         //Préparation de la requête pour la lecture de la news par id
@@ -45,28 +50,20 @@ public class NewsDao {
     }
 
     public boolean createNews(News news, Connection myConn){
-        //Préparation de la requête pour la création de la news
-        /*String sqlRequest = "INSERT INTO cours1.news VALUES (\"?\", \"?\", \"?\", \"?\", ?, \"?\", ?);";
 
-        //Ecriture de la requête
-        try (PreparedStatement preparedStatement = myConn.prepareStatement(sqlRequest)) {
+        String sqlRequest2 = "INSERT INTO " + currentBase + "." + currentTable + " (" + columnOrder + ") VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+        try (PreparedStatement preparedStatement = myConn.prepareStatement(sqlRequest2)) {
             preparedStatement.setString(1, news.getTitre());
             preparedStatement.setString(2, news.getContenu());
             preparedStatement.setString(3, news.getDate_creation());
             preparedStatement.setString(4, news.getAuteur());
             preparedStatement.setInt(5, news.getFacteur_confiance());
             preparedStatement.setString(6, news.getTags());
-            preparedStatement.setInt(7, news.getId_news());*/
+            preparedStatement.setInt(7, news.getId_news());
 
-
-        String sqlRequest = "INSERT INTO cours1.news VALUES (\"" + news.getTitre() +  "\", \"" + news.getContenu() + "\", \"" + news.getDate_creation() + "\", \"" + news.getAuteur() + "\", " + news.getFacteur_confiance() + ", \"" + news.getTags() + "\", " + news.getId_news() + ");";
-
-        try (PreparedStatement preparedStatement = myConn.prepareStatement(sqlRequest)) {
-            //preparedStatement.set
-            //Exécution de la requête
             preparedStatement.executeUpdate();
 
-            // A titre de debug
             System.out.println("News créée");
             return true;
 
@@ -75,8 +72,6 @@ public class NewsDao {
             System.out.println("Erreur lors du CREATE");
             return false;
         }
-
-
     }
 
     //executeupdate

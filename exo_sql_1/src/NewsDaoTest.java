@@ -25,7 +25,7 @@ class NewsDaoTest {
 
     private boolean boolTest;
 
-    private int idASupp = 2;
+    private int idASupp = 3;
 
     @Test
     void readById1() {
