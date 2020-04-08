@@ -1,6 +1,10 @@
 //import java.sql.Date;
 //import java.text.SimpleDateFormat;
 
+import javax.persistence.*;
+
+@Entity (name = "cours1")
+@Table(name = "news")
 public class News {
 
     /*A tester
@@ -18,13 +22,21 @@ public class News {
     id_news int PK
      */
 
+    @Column(name = "titre")
     private String titre;
+    @Column(name = "contenu")
     private String contenu;
+    @Column(name = "date_creation")
     private String date_creation;
+    @Column(name = "auteur")
     private String auteur;
+    @Column(name = "facteur_confiance")
     private int facteur_confiance;
+    @Column(name = "tags")
     private String tags;
+    @Column(name = "id_news")
     private int id_news;
+
 
     public News(){
 

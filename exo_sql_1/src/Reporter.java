@@ -1,9 +1,19 @@
+import javax.persistence.*;
 import java.sql.Connection;
 import java.sql.*;
 
+@Entity (name = "cours1")
+@Table(name = "journaliste")
 public class Reporter {
+
+    @Column(name = "pseudo")
     private String pseudo;
+
+    @Column(name = "credit")
     private int credit;
+
+    @Id @GeneratedValue
+    @Column(name = "id")
     private int id;
 
     public Reporter(){

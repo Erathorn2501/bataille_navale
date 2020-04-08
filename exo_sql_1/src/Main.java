@@ -1,12 +1,30 @@
 //package com.company;
 //import com.company.BDConnection;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.sql.*;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        final EntityManagerFactory emFactory;
+
+        emFactory = Persistence.createEntityManagerFactory("mysql-persistence-unit");
+
+        EntityManager entityManager = emFactory.createEntityManager();
+
+        entityManager.find(News.class, Reporter.class);
+
+
+
+
+
+
+
 
         Scanner sc = new Scanner(System.in);
 

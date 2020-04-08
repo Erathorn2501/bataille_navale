@@ -29,7 +29,7 @@ class NewsDaoTest {
 
     @Test
     void readById1() {
-        newsTest = newsDaoTest.readById(99, myConn);
+        newsTest = newsDaoTest.readById(1, myConn);
         assertEquals(newsLorem.toString(), newsTest.toString(), "readById1 : OK");
     }
 
