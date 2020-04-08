@@ -3,7 +3,7 @@
 
 import javax.persistence.*;
 
-@Entity (name = "cours1")
+@Entity
 @Table(name = "news")
 public class News {
 
@@ -34,6 +34,9 @@ public class News {
     private int facteur_confiance;
     @Column(name = "tags")
     private String tags;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_news")
     private int id_news;
 

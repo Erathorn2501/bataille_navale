@@ -2,7 +2,7 @@ import javax.persistence.*;
 import java.sql.Connection;
 import java.sql.*;
 
-@Entity (name = "cours1")
+@Entity
 @Table(name = "journaliste")
 public class Reporter {
 
