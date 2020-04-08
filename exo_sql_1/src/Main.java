@@ -20,20 +20,22 @@ public class Main {
         Connection connection = test1.Connection();//Etablissement d'une connecxtion (établissement de la connection)
 
         //Fin étape 1
+
+
         //Etape 2
-/*
+
         System.out.println("Veuillez renseigner votre Id : \n");//Récup de l'id du journaliste qui veut se connecter
         int nbResponse;
         nbResponse =sc.nextInt();//Récuperation de la valeur de l'id
         ReporterDao sessionJournaliste = new ReporterDao();
-        Reporter reporter1 =  sessionJournaliste.readById(nbResponse, connection);*/
+        Reporter reporter1 =  sessionJournaliste.readById(nbResponse, connection);
+
+        //Définir les droits
 
         //Fin étape 2
 
-        /*Test d'affichage
-        System.out.println("Journaliste identifié : " + reporter1.getPseudo());
-        System.out.println("Id : " + reporter1.getId());
-        System.out.println("Crédit : " + reporter1.getCredit());*/
+        //Test d'affichage
+        System.out.println(reporter1.toString());
 
         //Etape 3
         /*System.out.println("Souhaitez-vous ajouter un journaliste ? (1=oui/2=non)");
@@ -56,11 +58,11 @@ public class Main {
             sessionJournaliste.create(newReporter);
         }*/
 
-        System.out.println("test create");
+        //Charger les PK utilisées
+         {
 
-        NewsDao testCreate = new NewsDao();
-        News newsToCreate = new News("titre2", "Lorem2", "20-02-07", "juju", 5, "tagTest", 3);
+        }
 
-        testCreate.createNews(newsToCreate, connection);
+
     }
 }

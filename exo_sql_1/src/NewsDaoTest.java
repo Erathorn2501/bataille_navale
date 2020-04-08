@@ -29,7 +29,7 @@ class NewsDaoTest {
 
     @Test
     void readById1() {
-        newsTest = newsDaoTest.readById(1, myConn);
+        newsTest = newsDaoTest.readById(99, myConn);
         assertEquals(newsLorem.toString(), newsTest.toString(), "readById1 : OK");
     }
 
@@ -73,7 +73,7 @@ class NewsDaoTest {
     }
 
     @Test
-    void deleteNews2() {
+    void deleteNews2() {//pas validé
         boolTest = newsDaoTest.deleteNewsById(fakeNews.getId_news(), myConn);
         assertFalse(boolTest, "deleteNews : OK");
     }

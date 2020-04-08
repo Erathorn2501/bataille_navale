@@ -33,7 +33,7 @@ public class NewsDao {
                 news.setId_news(rs.getInt(7));
             }
             // A titre de debug
-            System.out.println(news);
+            //System.out.println(news);
             return news;
 
         } catch (SQLException e) {
