@@ -1,7 +1,8 @@
 //package com.company;
 
+import Beans.News;
+
 import java.sql.*;
-import java.text.SimpleDateFormat;
 
 public class NewsDao {
 
@@ -64,7 +65,7 @@ public class NewsDao {
 
             preparedStatement.executeUpdate();
 
-            System.out.println("News créée");
+            System.out.println("Beans.News créée");
             return true;
 
         } catch (SQLException e) {
@@ -152,7 +153,7 @@ public class NewsDao {
             preparedStatement.executeUpdate();
 
             // A titre de debug
-            System.out.println("News effacée");
+            System.out.println("Beans.News effacée");
             return true;
 
         } catch (SQLException e) {

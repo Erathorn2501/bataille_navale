@@ -27,7 +27,13 @@ public class BDConnection {
 
     }
 
-    public void stopConnection(){
-
+    public boolean stopConnection(){
+        try {
+            myConn.close();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

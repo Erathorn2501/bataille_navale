@@ -25,7 +25,7 @@ import java.util.Scanner;
 
             EntityManager entityManager = emFactory.createEntityManager();
 
-            entityManager.find(News.class, Reporter.class);*/
+            entityManager.find(Beans.News.class, Beans.Reporter.class);*/
 
 
 
@@ -54,13 +54,13 @@ import java.util.Scanner;
             int nbResponse;
             nbResponse =sc.nextInt();//Récuperation de la valeur de l'id
             ReporterDao sessionJournaliste = new ReporterDao();
-            Reporter reporter1 =  sessionJournaliste.readById(nbResponse, connection);*/
+            Beans.Reporter reporter1 =  sessionJournaliste.readById(nbResponse, connection);*/
 
             //Définir les droits
 
             //Fin étape 2
 
-            //Test d'affichage
+            //Old.Test d'affichage
             //System.out.println(reporter1.toString());
 
             //Etape 3
@@ -80,7 +80,7 @@ import java.util.Scanner;
             newCredit = sc.nextInt();
 
             //lancer méthode création journaliste (via objet)
-            Reporter newReporter = new Reporter(newJournaliste, newCredit, newId);
+            Beans.Reporter newReporter = new Beans.Reporter(newJournaliste, newCredit, newId);
             sessionJournaliste.create(newReporter);
         }*/
 

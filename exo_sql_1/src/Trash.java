@@ -23,7 +23,7 @@ public class Trash {
             preparedStatement.executeUpdate();
 
             // A titre de debug
-            System.out.println("News créée");
+            System.out.println("Beans.News créée");
             return true;
 
         } catch (SQLException e) {

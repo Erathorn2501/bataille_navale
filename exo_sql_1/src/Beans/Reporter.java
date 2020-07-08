@@ -1,3 +1,5 @@
+package Beans;
+
 import javax.persistence.*;
 import java.sql.Connection;
 import java.sql.*;
@@ -12,7 +14,8 @@ public class Reporter {
     @Column(name = "credit")
     private int credit;
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     @Column(name = "id")
     private int id;
 
@@ -71,7 +74,7 @@ public class Reporter {
 
     @Override
         public String toString() {
-            return "Reporter{" +
+            return "Beans.Reporter{" +
                     "pseudo='" + pseudo + '\'' +
                     ", credit=" + credit +
                     ", id=" + id +

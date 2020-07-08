@@ -1,3 +1,4 @@
+import Beans.News;
 import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;
@@ -20,7 +21,7 @@ class NewsDaoTest {
     private News fakeNews = new News("fake", "fake", "0000-00-00 00:00:00", "fake", 0, "fake", 999);
     private News wrongNews = new News("titre2", "Lorem2", "20-04-06", "juju", 5, "tagTest", 1);
     private News newsTest = new News();
-    //private News createNewsTest = new News("titre2", "Lorem2", "06/04/2020 14:21:00", "juju", 5, "tagTest", 2);
+    //private Beans.News createNewsTest = new Beans.News("titre2", "Lorem2", "06/04/2020 14:21:00", "juju", 5, "tagTest", 2);
     private NewsDao newsDaoTest = new NewsDao();
 
     private boolean boolTest;

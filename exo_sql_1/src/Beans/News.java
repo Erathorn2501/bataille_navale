@@ -1,4 +1,4 @@
-//import java.sql.Date;
+package Beans;//import java.sql.Date;
 //import java.text.SimpleDateFormat;
 
 import javax.persistence.*;
@@ -10,16 +10,6 @@ public class News {
     /*A tester
     SimpleDateFormat sdf =new SimpleDateFormat("dd/MM/YYYY hh:mm:ss");
     String dateString=sdf.format(date);
-     */
-
-    /*
-    titre varchar(40)
-    contenu varchar(150)
-    date_creation datetime
-    auteur varchar(20)
-    facteur_confiance int
-    tags varchar(100)
-    id_news int PK
      */
 
     @Column(name = "titre")
@@ -117,7 +107,7 @@ public class News {
 
     @Override
     public String toString() {
-        return "News{" +
+        return "Beans.News{" +
                 "titre='" + titre + '\'' +
                 ", contenu='" + contenu + '\'' +
                 ", date_creation='" + date_creation + '\'' +

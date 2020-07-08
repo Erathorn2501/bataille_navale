@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14d9e489-6600-4002-9059-edefd630ad5f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Bataille_navale" beforeDir="false" afterPath="$PROJECT_DIR$/../Bataille_navale" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyMenu-I" beforeDir="false" afterPath="$PROJECT_DIR$/../MyMenu-I" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyMenu-II" beforeDir="false" afterPath="$PROJECT_DIR$/../MyMenu-II" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyMenu-II-2" beforeDir="false" afterPath="$PROJECT_DIR$/../MyMenu-II-2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyMenu-III" beforeDir="false" afterPath="$PROJECT_DIR$/../MyMenu-III" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyMenu-IV" beforeDir="false" afterPath="$PROJECT_DIR$/../MyMenu-IV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyMenu-V" beforeDir="false" afterPath="$PROJECT_DIR$/../MyMenu-V" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyMenu-VI" beforeDir="false" afterPath="$PROJECT_DIR$/../MyMenu-VI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TexasHoldEm" beforeDir="false" afterPath="$PROJECT_DIR$/../TexasHoldEm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/out/production/exo_sql_1/BDConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/out/production/exo_sql_1/BDConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/out/production/exo_sql_1/News.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/out/production/exo_sql_1/NewsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/out/production/exo_sql_1/NewsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/out/production/exo_sql_1/NewsDaoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/out/production/exo_sql_1/Reporter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/out/production/exo_sql_1/ReporterDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/out/production/exo_sql_1/ReporterDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/out/production/exo_sql_1/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/out/production/exo_sql_1/TestJUnit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/out/test/exo_sql_1/HibernateBasicTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/out/test/exo_sql_1/HibernateBasicTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/src/BDConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/src/BDConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/src/CopyMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/src/CopyMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/src/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/src/Beans/News.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/src/NewsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/src/NewsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/src/NewsDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/test/NewsDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/src/Reporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/src/Beans/Reporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/src/ReporterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/src/ReporterDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/src/Old/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/src/TestJUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/src/Old/TestJUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/src/Trash.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/src/Trash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo_sql_1/test/HibernateBasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo_sql_1/test/HibernateBasicTest.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\33612\IdeaProjects\exo_webapp_1\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eOYFOxc1u8cAVnf3WxHrGS2h0x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/servlet-api.jar!/" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14d9e489-6600-4002-9059-edefd630ad5f" name="Default Changelist" comment="" />
+      <created>1594194001204</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594194001204</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

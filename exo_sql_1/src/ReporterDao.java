@@ -1,3 +1,5 @@
+import Beans.Reporter;
+
 import java.sql.*;
 
 public class ReporterDao {
